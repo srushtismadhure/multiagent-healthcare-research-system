@@ -1,0 +1,6 @@
+python-dotenv
+beautifulsoup4
+praw
+requests
+google-auth
+google-api-python-client
