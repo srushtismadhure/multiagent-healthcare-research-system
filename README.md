@@ -1,23 +1,26 @@
 # multiagent-healthcare-research-system
 
-> A multi-agent research automation system that monitors, retrieves, and synthesizes information across seven healthcare domains — built on a custom WAT framework with LLM-powered summarization and structured Google Workspace outputs.
+> A multi-agent research automation system that monitors, retrieves, and synthesizes information across seven healthcare domains which is built on a custom WAT framework with LLM-powered (Claude LLM orchestration) summarization and structured Google Workspace outputs.
 
-![Multi-Agent System](https://img.shields.io/badge/Multi--Agent%20System-blue)
-![Healthcare AI](https://img.shields.io/badge/Healthcare%20AI-teal)
-![LLM-Powered](https://img.shields.io/badge/LLM--Powered-orange)
-![Clinical Data](https://img.shields.io/badge/Clinical%20Data-red)
-![Google Workspace](https://img.shields.io/badge/Google%20Workspace-lightgrey)
-![Autonomous Execution](https://img.shields.io/badge/Autonomous%20Execution-green)
+![Multi-Agent System](https://img.shields.io/badge/Multi--Agent%20System-4A6FA5)
+![Healthcare AI](https://img.shields.io/badge/Healthcare%20AI-4A9E8E)
+![LLM-Powered](https://img.shields.io/badge/LLM--Powered-4A6FA5)
+![Clinical Data](https://img.shields.io/badge/Clinical%20Data-4A9E8E)
+![Google Workspace](https://img.shields.io/badge/Google%20Workspace-4A6FA5)
+![Autonomous Execution](https://img.shields.io/badge/Autonomous%20Execution-4A9E8E)
 
 ---
 
 ## Project Overview
 
-This is a functional prototype of an autonomous multi-agent research pipeline designed to track and synthesize developments across seven healthcare domains. The system is built on a custom **WAT (Workflows, Agents, Tools)** framework and uses an **Orchestrator + parallel subagents** model, where each domain agent runs its own retrieval, evaluation, and summarization workflow concurrently.
+This is a **functional prototype** of an autonomous multi-agent research pipeline designed to 
+track and synthesize developments across **seven healthcare domains**. The system is built on a 
+custom **WAT (Workflows, Agents, Tools)** framework and uses an **Orchestrator + parallel 
+subagents** model, where each domain agent runs its own **retrieval, evaluation, and 
+summarization** workflow concurrently.
 
-Outputs are written as structured summaries to per-domain Google Docs, with metadata and run history logged to a master Google Sheet — giving analysts and product teams a continuously updated, organized intelligence feed without manual research overhead.
+Outputs are written as structured summaries to per-domain Google Docs, with metadata and run history logged to a master Google Sheet, giving analysts and product teams a continuously updated, organized intelligence feed without manual research overhead.
 
-Built by a healthcare data analyst with a background in clinical informatics, health data engineering, and applied AI — this project reflects how modern LLM tooling can be applied to real workflows in healthcare research and decision support.
 
 ---
 
@@ -27,8 +30,11 @@ This project represents end-to-end design and engineering work, not configuratio
 
 - **Designed the multi-agent architecture** — defined the Orchestrator + parallel subagent pattern and scoped each agent's responsibility boundaries within the WAT framework
 - **Built the orchestration logic** — workflow sequencing, domain task dispatch, retry handling, and cross-agent output aggregation
-- **Defined agent scopes, prompts, and output schemas** — each of the seven domain agents has a distinct system prompt, source tier configuration, and structured output format
+
+- **Defined agent scopes, workflows, tools and output schemas** — built seven domain-specific agents, each with its own goal, prompt, source rules, workflow steps, and output format. I also created clear workflow and tool-instruction files so each agent knew how to search, evaluate sources, summarize findings, and send outputs to Google Docs and the master tracking Sheet.
+
 - **Integrated LLM-based synthesis** — wired Claude (Anthropic) into the retrieval-summarization pipeline for each domain agent
+
 - **Connected structured outputs to Google Workspace** — automated writing to per-domain Google Docs and a master tracking Google Sheet via the Google Docs and Sheets APIs
 - **Authored `ARCHITECTURE.md`** — full system design documentation with ASCII diagrams, agent specs, and source tier rationale
 
@@ -182,4 +188,4 @@ This system is designed for **research synthesis and workflow automation only**.
 
 ---
 
-*Built by a healthcare data analyst with expertise in clinical informatics, health data engineering, and applied AI. Focused on making healthcare intelligence more structured, accessible, and actionable.*
+By - Srushti Madhure
